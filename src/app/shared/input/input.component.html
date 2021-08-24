@@ -1,0 +1,19 @@
+<div>
+  <po-input
+    [(ngModel)]="content"
+    [p-label]="label"
+    (p-change)="changeEvent($event)"
+    [p-mask]="mask"
+    [p-readonly]="readonly"
+  >
+  </po-input>
+
+  <div class="po-field-container-bottom" *ngIf="hasError && errorIsEmpty !== undefined">
+    <span class="po-field-container-bottom-text-error">
+      <span
+        class="po-icon po-icon-warning po-field-container-icon-error"
+      ></span>
+      {{ errorIsEmpty }}
+    </span>
+  </div>
+</div>

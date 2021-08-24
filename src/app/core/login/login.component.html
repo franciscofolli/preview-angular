@@ -1,0 +1,14 @@
+<po-loading-overlay *ngIf="showLoading"
+    [p-screen-lock]="true"
+    p-text="Aguarde..." >
+</po-loading-overlay>
+
+<po-page-login 
+    p-blocked-url="/documentation/po-page-blocked-user"
+    (p-login-submit)="onExecuteLogin($event)"
+    [p-literals]="customLiterals"
+    [p-recovery]="this.recoveryPassword.bind(this)">
+</po-page-login>
+
+
+

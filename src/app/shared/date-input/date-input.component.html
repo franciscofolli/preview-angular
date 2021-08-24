@@ -1,0 +1,19 @@
+<div>
+  <po-datepicker
+    [p-label]="label"
+    (p-change)="onChangeDate($event)"
+    [ngModelOptions]="{standalone: true}"
+    [(ngModel)]="content"
+    p-format="dd/mm/yyyy"
+  >
+  </po-datepicker>
+
+  <div class="po-field-container-bottom" *ngIf="hasError">
+    <span class="po-field-container-bottom-text-error">
+      <span
+        class="po-icon po-icon-warning po-field-container-icon-error"
+      ></span>
+      {{ errorIsEmpty }}
+    </span>
+  </div>
+</div>

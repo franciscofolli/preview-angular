@@ -1,0 +1,11 @@
+<div>
+  <po-multiselect [(ngModel)]="content" [p-label]="label" [p-options]="options" (p-change)="changeEvent()"> </po-multiselect>
+
+  <div class="po-field-container-bottom" *ngIf="hasError">
+    <span class="po-field-container-bottom-text-error">
+      <span class="po-icon po-icon-warning po-field-container-icon-error"></span>
+      {{ errorIsEmpty }}
+    </span>
+  </div>
+
+</div>

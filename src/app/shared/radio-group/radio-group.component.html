@@ -1,0 +1,17 @@
+<div>
+  <po-radio-group
+    [p-label]="label"
+    [p-options]="option"
+    [(ngModel)]="content"
+    (p-change)="onChangeRadio($event)"
+  >
+  </po-radio-group>
+
+  <div class="po-field-container-bottom" *ngIf="hasError">
+    <span class="po-field-container-bottom-text-error">
+      <span class="po-icon po-icon-warning po-field-container-icon-error"></span>
+      {{ errorIsEmpty }}
+    </span>
+  </div>
+
+</div>
